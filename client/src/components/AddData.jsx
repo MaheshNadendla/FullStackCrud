@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import toast from "react-hot-toast";
 
 import axios from "axios";
 
-function Update() {
+function Add() {
+  const nav = useNavigate();
   const [user, setUser] = useState({
     fname: "",
     lname: "",
@@ -38,18 +39,31 @@ function Update() {
   //     console.log("error here");
   // }
 
-  axios.post("http://localhost:8080/api/create/",user).then(
-    (response)=>{
-        console.log(response);
-        toast.success("User is Added Sucessfully", {
-          position: "top-right", // You can change this to your preferred position
-        });
+    const { fname, lname, email, password } = user;
+
+    if (!fname || !lname || !email || !password) {
+      toast.error("Enter valid details", {
+        position: "top-right", // You can change this to your preferred position
+      });
     }
-  ).catch((err)=>{console.log(err)
-    toast.error("Internal server Error", {
-      position: "top-right", // You can change this to your preferred position
-    });
-  });
+
+    else{
+
+        axios.post("http://localhost:8080/api/create/",user).then(
+          (response)=>{
+              console.log(response);
+              toast.success("User is Added Sucessfully", {
+                position: "top-right", // You can change this to your preferred position
+              });
+              nav("/home");
+          }
+        ).catch((err)=>{console.log(err)
+          toast.error("Internal server Error", {
+            position: "top-right", // You can change this to your preferred position
+          });
+        });
+
+    }
 
 
   };
@@ -115,8 +129,9 @@ function Update() {
 
         <button onClick={handleSignup} >Submit</button>
       </div>
+
     </>
   );
 }
 
-export default Update;
+export default Add;

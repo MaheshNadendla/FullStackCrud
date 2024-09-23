@@ -96,24 +96,26 @@ button{
 
 
     .AddData a {
-      padding-block: 8px;
       background-color: blue;
       color: white;
       text-decoration: none;
-      border: 1px solid black;
-      padding-inline: 20px;
+      border: 1px solid red;
     
-      position: relative; /* Make it relative to the parent */
-      top: 4%;
-      left: 50%;
-      transform: translate(-50%, 0);
+      position: absolute; /* Make it relative to the parent */
+      height: 50px;
+      width: 50px;
+      top:45px;
+      left: 100px;
+      font-size: xx-large;
+      text-align: center;
+      transform: translate(-50%,-50%);
     }
 
 
     table {
       width: 100%; /* Ensure the table takes up the full width of the parent */
       border: none;
-      margin-top: 10%; /* Add some spacing from the top if needed */
+      margin-top: 0%; /* Add some spacing from the top if needed */
       padding: 50px;
       text-align: center;
       th {
