@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
-import Update from './components/Update';
+import AddData from './components/AddData';
 import { BrowserRouter } from 'react-router-dom';
 import { Navigate, Route, Routes } from "react-router-dom";
 
@@ -15,9 +14,9 @@ function App() {
       
           <Routes >
 
-          <Route path="/" element={< Navigate to="/update" />} />
-          <Route path="/login" element={<Home/>} />
-          <Route path="/update" element={<Update/>} />
+          <Route path="/" element={< Navigate to="/home" />} />
+          <Route path="/home" element={<Home/>} />
+          <Route path="/add" element={<AddData/>} />
 
           </Routes>
       
