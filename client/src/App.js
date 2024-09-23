@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './components/Home';
 import AddData from './components/AddData';
+
 import { BrowserRouter } from 'react-router-dom';
 import { Navigate, Route, Routes } from "react-router-dom";
 

@@ -18,7 +18,7 @@ function Home() {
     <div className='HomeDiv'>
       <div className="TableDiv">
         <div className="AddData">
-          <Link  to="/update">addData</Link>
+          <Link  to="/add">addData</Link>
         </div>
 
         <table className='MainTable' border={1}>

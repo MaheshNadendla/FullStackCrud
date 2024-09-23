@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import axios from "axios";
+import toast from "react-hot-toast";
 
-// import "./Signup.css";
+import axios from "axios";
 
 function Update() {
   const [user, setUser] = useState({
@@ -41,8 +41,15 @@ function Update() {
   axios.post("http://localhost:8080/api/create/",user).then(
     (response)=>{
         console.log(response);
+        toast.success("User is Added Sucessfully", {
+          position: "top-right", // You can change this to your preferred position
+        });
     }
-  ).catch((err)=>console.log(err));
+  ).catch((err)=>{console.log(err)
+    toast.error("Internal server Error", {
+      position: "top-right", // You can change this to your preferred position
+    });
+  });
 
 
   };

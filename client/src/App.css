@@ -78,74 +78,68 @@ button{
   transform: translate(-50%,0%);
 
 
+
+
   .TableDiv{
 
 
     background-color: white;
-    width: 80dvw;
-    min-height: 80dvh;
+    width: 80vw; /* Use vw instead of dvw for wider browser compatibility */
+    min-height: 100vh; /* Ensure the height is at least the viewport height */
+    padding: 20px; /* Add padding if needed */
+    margin: 0 auto; /* Center the TableDiv horizontally */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width/height */
+  
+    /* Ensure no overflow */
+    overflow: hidden; /* Prevent any content from overflowing */
+  
 
 
-    .AddData a{
+    .AddData a {
       padding-block: 8px;
       background-color: blue;
       color: white;
       text-decoration: none;
       border: 1px solid black;
       padding-inline: 20px;
-
-      position: absolute;
-      top:4%;
+    
+      position: relative; /* Make it relative to the parent */
+      top: 4%;
       left: 50%;
-      transform: translate(-50%,0);
-
+      transform: translate(-50%, 0);
     }
 
 
-    table{
-
-      position: absolute;
-      top:10%;
-      left:50%;
-      transform: translate(-50%,0%);
+    table {
+      width: 100%; /* Ensure the table takes up the full width of the parent */
       border: none;
-
-      th{
-
+      margin-top: 10%; /* Add some spacing from the top if needed */
+      padding: 50px;
+      text-align: center;
+      th {
         padding-inline: 50px;
         padding-block: 12px;
-
       }
-
-
-      td{
-
+    
+      td {
         padding-inline: 50px;
         padding-block: 10px;
-
-        button{
+    
+        button {
           padding-block: 8px;
           background-color: red;
           color: white;
-          
+        }
     
+        a {
+          text-decoration: none;
+          padding-block: 8px;
+          border: 1px solid black;
+          color: white;
+          background-color: green;
+          margin-right: 3px;
         }
-
-        a{
-            text-decoration: none;
-            padding-block: 8px;
-            border: 1px solid black;
-            color: white;
-            background-color: green;
-            margin-right: 3px;
-
-        }
-        
-
       }
-
-    
-
     }
 
   }
