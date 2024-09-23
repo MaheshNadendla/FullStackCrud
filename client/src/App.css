@@ -100,14 +100,16 @@ button{
       color: white;
       text-decoration: none;
       border: 1px solid red;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     
       position: absolute; /* Make it relative to the parent */
       height: 50px;
       width: 50px;
       top:45px;
       left: 100px;
-      font-size: xx-large;
-      text-align: center;
       transform: translate(-50%,-50%);
     }
 
@@ -128,18 +130,20 @@ button{
         padding-block: 10px;
     
         button {
+          height: 40px;
+          width: 40px;
           padding-block: 8px;
           background-color: red;
           color: white;
         }
     
         a {
+          padding: 9px;
           text-decoration: none;
-          padding-block: 8px;
           border: 1px solid black;
           color: white;
           background-color: green;
-          margin-right: 3px;
+          margin-right: 5px;
         }
       }
     }

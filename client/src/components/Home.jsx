@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+
 import toast from 'react-hot-toast';
 
 function Home() {
@@ -34,7 +35,7 @@ function Home() {
     <div className='HomeDiv'>
       <div className="TableDiv">
         <div className="AddData">
-          <Link  to="/add">+</Link>
+          <Link  to="/add"><i class="fa-regular fa-address-card fa-2xl"></i></Link>
         </div>
 
         <table className='MainTable' border={1}>
@@ -55,8 +56,8 @@ function Home() {
                   <td>{user.fname + " " + user.lname}</td>
                   <td>{user.email}</td>
                   <td>
-                    <Link to={`/update/${user._id}`}>Update</Link>
-                    <button onClick={() => Delete(user._id)} className="delete">Delete</button>
+                    <Link to={`/update/${user._id}`}><i class="fa-solid fa-pen-to-square fa-xl"></i></Link>
+                    <button onClick={() => Delete(user._id)} className="delete"> <i class="fa-solid fa-trash fa-xl"></i> </button>
                   </td>
                 </tr>
               ))
