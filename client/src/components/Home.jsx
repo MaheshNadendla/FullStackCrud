@@ -9,7 +9,7 @@ function Home() {
   const [users, setUsers] = useState([]); 
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/print/")
+    axios.get("https://basicapp1-pync.onrender.com/api/print/")
       .then((response) => {
         setUsers(response.data); 
         console.log(response);
@@ -19,7 +19,7 @@ function Home() {
 
   
   function Delete(id) {
-    axios.delete(`http://localhost:8080/api/del/${id}`)
+    axios.delete(`https://basicapp1-pync.onrender.com/api/del/${id}`)
       .then((response) => {
         setUsers(users.filter(user => user._id !== id));
         toast.success("User deleted successfully");
