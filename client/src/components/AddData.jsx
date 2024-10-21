@@ -49,7 +49,7 @@ function Add() {
 
     else{
 
-        axios.post("http://localhost:8080/api/create/",user).then(
+        axios.post("https://basicapp1-pync.onrender.com/api/create/",user).then(
           (response)=>{
               console.log(response);
               toast.success("User is Added Sucessfully", {
