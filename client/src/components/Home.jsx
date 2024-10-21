@@ -44,7 +44,7 @@ function Home() {
               <th>S.NO</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Action</th>
+              <th>Asction</th>
             </tr>
           </thead>
 
