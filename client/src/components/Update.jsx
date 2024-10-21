@@ -17,7 +17,7 @@ function Update() {
   useEffect(
     ()=>{
 
-    axios.get(`http://localhost:8080/api/getone/${id}`,user).then(
+    axios.get(`https://basicapp1-pync.onrender.com/api/getone/${id}`,user).then(
         (response)=>{
             setUser(response.data);
             console.log(response);
@@ -34,7 +34,7 @@ function Update() {
   const handleSignup = async (e) => {
     e.preventDefault();
 
-  axios.put(`http://localhost:8080/api/update/${id}`,user).then(
+  axios.put(`https://basicapp1-pync.onrender.com/api/update/${id}`,user).then(
     (response)=>{
         console.log(response);
         toast.success("User is Added Sucessfully", {
